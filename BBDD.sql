@@ -54,26 +54,32 @@ CREATE TABLE Propietario (
 
 -- TABLAS DEBILES --
 CREATE TABLE ContratoArriendo (
-    id_contrato INT;
-    fecha_inicio_contrato DATE;
-    valor_canon_contrato DOUBLE;
-    valor_administracion_contrato DOUBLE;
+    id_contrato INT PRIMARY KEY NOT NULL;
+    fecha_inicio_contrato DATE NOT NULL;
+    valor_canon_contrato DOUBLE NOT NULL;
+    valor_administracion_contrato DOUBLE NOT NULL;
     rc_pagos_contrato INT NOT NULL;
     cedula_arrendatario_contrato INT NOT NULL;
 )
 
 CREATE TABLE Inmueble (
-   matricula_inmobiliaria_inmueble PRIMARY KEY VARCHAR() NOT NULL;
-   chip_inmueble VARCHAR() NOT NULL;
-   tipo_inmueble VARCHAR() NOT NULL;
-   nomenclarura_inmueble VARCHAR() NOT NULL;
+   matricula_inmobiliaria_inmueble PRIMARY KEY VARCHAR(13) NOT NULL;
+   chip_inmueble VARCHAR(11) NOT NULL;
+   tipo_inmueble VARCHAR(11) NOT NULL;
+   nomenclarura_inmueble VARCHAR(10) NOT NULL;
    area_privada_inmueble DOUBLE NOT NULL;
    area_construida_inmueble DOUBLE NOT NULL;
-   numero_escritura_inmueble  VARCHAR() NOT NULL;
+   numero_escritura_inmueble  VARCHAR(20) NOT NULL;
    alcobas_inmueble INT NOT NULL;
    baños_inmueble INT NOT NULL;
    vehiculo_inmueble INT NOT NULL;
    id_locativa_inmueble INT NOT NULL;
    cedula_propietario_inmueble INT NOT NULL;
    matricula_inmobiliaria_proyecto_inmueble INT NOT NULL;
+)
+
+-- TABLAS DE TRANSICION --
+CREATE TABLE ContratoInmueble (
+    id_contrato INT NOT NULL;
+    matricula_inmobiliaria_inmueble VARCHAR(13) NOT NULL;
 )
