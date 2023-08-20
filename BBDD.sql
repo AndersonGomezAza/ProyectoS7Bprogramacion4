@@ -5,7 +5,7 @@ USE DATABASE cr_mercantil;
 
 -- TABLAS FUERTES --
 CREATE TABLE Proyecto (
-    matricula_inmobiliaria INT PRIMARY KEY NOT NULL;
+    matricula_inmobiliaria_proyecto INT PRIMARY KEY NOT NULL;
     nombre_proyecto VARCHAR(30) NOT NULL;
     direccion_proyecto VARCHAR(30) NOT NULL;
     estrato_proyecto INT NOT NULL;
@@ -53,3 +53,27 @@ CREATE TABLE Propietario (
 )
 
 -- TABLAS DEBILES --
+CREATE TABLE ContratoArriendo (
+    id_contrato INT;
+    fecha_inicio_contrato DATE;
+    valor_canon_contrato DOUBLE;
+    valor_administracion_contrato DOUBLE;
+    rc_pagos_contrato INT NOT NULL;
+    cedula_arrendatario_contrato INT NOT NULL;
+)
+
+CREATE TABLE Inmueble (
+   matricula_inmobiliaria_inmueble PRIMARY KEY VARCHAR() NOT NULL;
+   chip_inmueble VARCHAR() NOT NULL;
+   tipo_inmueble VARCHAR() NOT NULL;
+   nomenclarura_inmueble VARCHAR() NOT NULL;
+   area_privada_inmueble DOUBLE NOT NULL;
+   area_construida_inmueble DOUBLE NOT NULL;
+   numero_escritura_inmueble  VARCHAR() NOT NULL;
+   alcobas_inmueble INT NOT NULL;
+   baños_inmueble INT NOT NULL;
+   vehiculo_inmueble INT NOT NULL;
+   id_locativa_inmueble INT NOT NULL;
+   cedula_propietario_inmueble INT NOT NULL;
+   matricula_inmobiliaria_proyecto_inmueble INT NOT NULL;
+)
