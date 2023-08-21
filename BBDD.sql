@@ -30,13 +30,13 @@ CREATE TABLE Arrendatario (
     nombre_arrendatario VARCHAR(20) NOT NULL;
     apellido_arrendatario VARCHAR(20) NOT NULL;
     telefono_arrendatario INT NOT NULL;
-    corrreo_arrendatario VARCHAR(20) NULL;
+    correo_arrendatario VARCHAR(20) NULL;
 )
 
 CREATE TABLE ArregloLocativo (
     id_locativa_arreglo INT PRIMARY KEY NOT NULL;
     fecha_inicio_arreglo DATE NOT NULL;
-    fecha_finalizacion_arreglo DATE NOT NULL;
+    fecha_finalizacion_arreglo DATE NULL;
     estado_arreglo BOOLEAN NOT NULL;
     observaciones_arreglo TEXT NOT NULL;
 )
@@ -46,7 +46,7 @@ CREATE TABLE Propietario (
     nombre_propietario VARCHAR(20) NOT NULL;
     apellido_propietario VARCHAR(20) NOT NULL;
     telefono_propietario INT NOT NULL;
-    corrreo_propietario VARCHAR(20) NULL;
+    correo_propietario VARCHAR(20) NULL;
     cuenta_bancaria_propietario int NOT NULL;
     tipo_cuenta_propietario VARCHAR(9);
     nombre_banco_propietario VARCHAR(30);
@@ -83,3 +83,26 @@ CREATE TABLE ContratoInmueble (
     id_contrato INT NOT NULL;
     matricula_inmobiliaria_inmueble VARCHAR(13) NOT NULL;
 )
+
+-- CREACION DE CONSTRAINS O RESTRICCIONES
+  -- LLAVES FORANEAS TABLAS DEBILES
+	ALTER TABLE ContratoArriendo ADD CONSTRAIN pk_contrato_arrendatario FOREIGN KEY (cedula_arrendatario_contrato) REFERENCES Arrendatario (cedula_arrendatario);
+	ALTER TABLE ContratoArriendo ADD CONSTRAIN pk_contrato_pagos FOREIGN KEY (rc_pagos_contrato) REFERENCES Pagos (rc_pagos);
+	ALTER TABLE Inmueble ADD CONSTRAIN pk_inmueble_arreglo FOREIGN KEY (id_locativa_inmueble) REFERENCES ArregloLocativo (id_locativa_arreglo);
+	ALTER TABLE Inmueble ADD CONSTRAIN pk_inmueble_propietario FOREIGN KEY (cedula_propietario_inmueble) REFERENCES Propietario (cedula_propietario);
+	ALTER TABLE Inmueble ADD CONSTRAIN pk_inmueble_proyecto FOREIGN KEY (matricula_inmobiliaria_proyecto_inmueble) REFERENCES Proyecto (matricula_inmobiliaria_proyecto);
+  
+	-- LLAVES FORANEAS TABLAS TRANSICION
+	ALTER TABLE ContratoInmueble ADD CONSTRAIN pk_contrato_inmueble_contrato_arriendo FOREIGN KEY (id_contrato) REFERENCES ContratoArriendo (id_contrato);
+	ALTER TABLE ContratoInmueble ADD CONSTRAIN pk_contrato_inmueble_inmueble FOREIGN KEY (matricula_inmobiliaria_inmueble) REFERENCES Inmueble (matricula_inmobiliaria_inmueble);
+	
+	-- OTROS CONSTRAINS
+	ALTER TABLE Proyecto ADD CONSTRAINT UQ_correo_administrador_proyecto UNIQUE (correo_administrador_proyecto);
+	ALTER TABLE Arrendatario ADD CONSTRAINT UQ_correo_arrendatario UNIQUE (correo_arrendatario);
+	ALTER TABLE Propietario ADD CONSTRAINT UQ_correo_propietario UNIQUE (correo_propietario);
+	ALTER TABLE Propietario ADD CONSTRAINT CH_tipo_cuenta_propietario CHECK (tipo_cuenta_propietario IN ('AHORROS', 'CORRIENTE'));
+	ALTER TABLE Inmueble ADD CONSTRAINT CH_tipo_inmueble CHECK (tipo_inmueble IN ('APARTAMENTO', 'GARAJE', 'BODEGA'));
+    
+	
+	
+	
