@@ -30,3 +30,8 @@ dentro de la carpeta que quieran clonar el repositorio
 10. Trabajan sobre eso y pueden crear los controladores
 
 lo demas creo que ya esta realizado no debe ponerle problemas para crear los controladores diria yo :3
+
+11. Cuando terminen de crear los controladores correspondientes realizan los siguientes comandos segun quien lo suba 
+    recuerden no poner todo esto (BackEndEdward - BackEndJhojan - BackEndKevin) sino que es segun quien lo este haciendo 
+
+12. git add . -> git commit -m " Uploading part about (BackEndEdward - BackEndJhojan - BackEndKevin) " -> git push origin (BackEndEdward - BackEndJhojan - BackEndKevin)
