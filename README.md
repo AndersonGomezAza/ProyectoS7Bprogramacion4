@@ -6,7 +6,32 @@ Repositorio con codigo de bases de datos y api backend para ser consumida por an
 
 Subiendo rama develop o main secundaria
 
-Creacion del backend desde la rama BackEndAnderson donde se encuentran la creacion de los modulos y7 la creacion de 2 controladores para el modulo arrendatarios y propietarios
+para seguir con el backend por favor realizar los siguientes pasos
 
-realizar el siguiente comando para agregar los otros controladores
-    git pull origin BackEndAnderson
+1. utilizar el comando git clone https://github.com/AndersonGomezAza/ProyectoS7Bprogramacion4.git
+dentro de la carpeta que quieran clonar el repositorio
+
+2. Abrir la carpeta ProyectoS7Bprogramacion4 y abrir la terminal
+
+3. Realizar el comando git checkout develop
+
+4. Realizar el comando git pull origin develop
+
+5. Despues crean una rama dependiendo de quien sea ejemplo ( git branch (BackEndEdward - BackEndJhojan - BackEndKevin))
+
+6. cambian a la rama que crearon  git checkout (BackEndEdward - BackEndJhojan - BackEndKevin);
+
+7. Abrir Visual Community
+
+8. Abrir Carpeta Local
+
+9. Abrir dentro de la carpeta ProyectoS7Bprogramacion4 la de CrMercantil
+
+10. Trabajan sobre eso y pueden crear los controladores
+
+lo demas creo que ya esta realizado no debe ponerle problemas para crear los controladores diria yo :3
+
+11. Cuando terminen de crear los controladores correspondientes realizan los siguientes comandos segun quien lo suba 
+    recuerden no poner todo esto (BackEndEdward - BackEndJhojan - BackEndKevin) sino que es segun quien lo este haciendo 
+
+12. git add . -> git commit -m " Uploading part about (BackEndEdward - BackEndJhojan - BackEndKevin) " -> git push origin (BackEndEdward - BackEndJhojan - BackEndKevin)
