@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0/iCppR+Ypku32gJg6Nyjm/DXxkYYM/Vl4+eADB1W/dlv9tivYpwn7mplvYYR9303kQJongBrVsVdYb4Esl5VA==",
+  "dgSpecHash": "HKLkRjxzUnP1eQI5raYvMWJ31/eqOXxFHcohgJvZh/+2XUMFEmgg2bVBgPa/wqmOuyPU79nzWT8e+ui+IBbOAg==",
   "success": true,
-  "projectFilePath": "D:\\7 semestre\\PROGRAMACION 4\\PROYECTO 7 SEMESTRE\\CrMercantil\\CrMercantil\\CrMercantil.csproj",
+  "projectFilePath": "D:\\PROYECTO 7 SEMESTRE\\ProyectoS7Bprogramacion4\\CrMercantil\\CrMercantil.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
