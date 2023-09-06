@@ -11608,11 +11608,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\7 semestre\\PROGRAMACION 4\\PROYECTO 7 SEMESTRE\\CrMercantil\\CrMercantil\\CrMercantil.csproj",
+      "projectUniqueName": "D:\\7 semestre\\PROGRAMACION 4\\FRONTCRMERCANTIL\\ProyectoS7Bprogramacion4\\CrMercantil\\CrMercantil.csproj",
       "projectName": "CrMercantil",
-      "projectPath": "D:\\7 semestre\\PROGRAMACION 4\\PROYECTO 7 SEMESTRE\\CrMercantil\\CrMercantil\\CrMercantil.csproj",
+      "projectPath": "D:\\7 semestre\\PROGRAMACION 4\\FRONTCRMERCANTIL\\ProyectoS7Bprogramacion4\\CrMercantil\\CrMercantil.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "D:\\7 semestre\\PROGRAMACION 4\\PROYECTO 7 SEMESTRE\\CrMercantil\\CrMercantil\\obj\\",
+      "outputPath": "D:\\7 semestre\\PROGRAMACION 4\\FRONTCRMERCANTIL\\ProyectoS7Bprogramacion4\\CrMercantil\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
